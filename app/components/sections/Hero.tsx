@@ -5,67 +5,93 @@ export function Hero() {
     <section
       id="hero"
       aria-label="Hero"
-      className="relative min-h-svh flex items-center overflow-hidden bg-hero-gradient"
+      className="relative flex min-h-svh items-center overflow-hidden bg-(--navy-dark)"
     >
-      {/* Diagonal gold slash — signature element */}
+      {/* Diagonal gold slash */}
       <div
         aria-hidden="true"
-        className="hero-slash absolute top-[-10%] right-[-5%] w-[55%] h-[130%] bg-gold opacity-[0.06]"
+        className="hero-slash absolute top-[-10%] right-[-5%] h-[130%] w-[55%] bg-(--gold) opacity-[0.06]"
       />
 
       {/* Dot grid */}
-      <div aria-hidden="true" className="dot-grid absolute inset-0" />
-
-      {/* Illustrated school scene (right panel) */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute right-0 top-0 bottom-0 w-[48%] overflow-hidden"
+        className="dot-grid absolute inset-0"
+      />
+
+      {/* Illustration */}
+      <div
+        aria-hidden="true"
+        className="absolute top-0 right-0 bottom-0 hidden w-[48%] overflow-hidden lg:block"
       >
-        {/* Left-side fade */}
-        <div className="fade-left absolute left-0 top-0 bottom-0 w-28 z-10" />
-        <div className="w-full h-full bg-linear-to-br from-navy-light to-navy-dark flex items-center justify-center">
+        <div className="fade-left absolute top-0 bottom-0 left-0 z-10 w-28" />
+
+        <div
+          className="flex h-full w-full items-center justify-center bg-linear-to-br"
+          // style={{
+          //   backgroundImage:
+          //     "linear-gradient(to bottom right, var(--navy-light), var(--navy-dark))",
+          // }}
+        >
           <SchoolIllustration />
         </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-20 w-full">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 bg-gold/15 border border-gold/35 text-gold
-                        text-[0.78rem] font-semibold tracking-widest uppercase px-3.5 py-1.5
-                        rounded-full mb-7 font-head">
-          <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+        <div
+          className="mb-7 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-widest"
+          style={{
+            background: "rgba(244,180,0,.15)",
+            borderColor: "rgba(244,180,0,.35)",
+            color: "var(--gold)",
+            fontFamily: "var(--font-head)",
+          }}
+        >
+          <span
+            className="h-1.5 w-1.5 rounded-full"
+            style={{ background: "var(--gold)" }}
+          />
           WAEC &amp; NECO Approved School
         </div>
 
-        {/* Headline */}
-        <h1 className="font-head font-extrabold text-white leading-[1.1] mb-5
-                       text-4xl sm:text-5xl lg:text-[3.6rem] max-w-150">
+        {/* Heading */}
+        <h1
+          className="mb-5 max-w-212.5 text-4xl leading-[1.1] font-extrabold text-white sm:text-5xl lg:text-[3.6rem]"
+          style={{ fontFamily: "var(--font-head)" }}
+        >
           Building{" "}
-          <span className="text-gold">Tomorrow&apos;s</span>
-          <br />Leaders Through
-          <br />Quality Education
+          <span style={{ color: "var(--gold)" }}>
+            Tomorrow&apos;s
+          </span>
+          <br />
+          Leaders Through
+          <br />
+          Quality Education
         </h1>
 
-        {/* Sub */}
-        <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-10 max-w-115">
-          We nurture excellence, character, creativity, and innovation from Nursery through
-          Secondary School — shaping futures one student at a time.
+        {/* Description */}
+        <p className="mb-10 max-w-180 text-base leading-relaxed text-white/75 sm:text-lg">
+          We nurture excellence, character, creativity, and innovation from
+          Nursery through Secondary School — shaping futures one student at a
+          time.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-3.5 mb-14">
+        <div className="mb-14 flex flex-wrap gap-3.5">
           <Button href="#admissions" size="lg">
             <Arrow />
             Apply for Admission
           </Button>
+
           <Button href="#contact" variant="secondary" size="lg">
             <CalendarIcon />
             Book a School Tour
           </Button>
         </div>
 
-        {/* Stats strip */}
+        {/* Stats */}
         <div className="flex flex-wrap gap-7">
           {[
             { icon: "✅", strong: "15+ Years", label: "of Excellence" },
@@ -73,12 +99,25 @@ export function Hero() {
             { icon: "👩‍🏫", strong: "150+", label: "Qualified Teachers" },
             { icon: "📊", strong: "98%", label: "WAEC Success Rate" },
           ].map((s) => (
-            <div key={s.strong} className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-gold/15 flex items-center justify-center text-base">
+            <div
+              key={s.strong}
+              className="flex items-center gap-2.5"
+            >
+              <div
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-base"
+                style={{ background: "rgba(244,180,0,.15)" }}
+              >
                 {s.icon}
               </div>
-              <div className="text-sm text-white/80 font-medium leading-tight">
-                <strong className="block text-white font-head">{s.strong}</strong>
+
+              <div className="text-sm leading-tight font-medium text-white/80">
+                <strong
+                  className="block text-white"
+                  style={{ fontFamily: "var(--font-head)" }}
+                >
+                  {s.strong}
+                </strong>
+
                 {s.label}
               </div>
             </div>
@@ -86,23 +125,37 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Floating achievement cards */}
+      {/* Floating Cards */}
       <div
         aria-hidden="true"
-        className="hidden xl:flex flex-col gap-3.5 absolute right-[6%] bottom-[12%] z-20"
+        className="absolute right-[6%] bottom-[12%] z-20 hidden flex-col gap-3.5 xl:flex"
       >
-        <FloatCard icon="🏆" title="25+ Awards" sub="National Recognition" delay="float-card-1" />
-        <FloatCard icon="📚" title="WAEC Certified" sub="Approved Curriculum" delay="float-card-2" />
+        <FloatCard
+          icon="🏆"
+          title="25+ Awards"
+          sub="National Recognition"
+          delay="float-card-1"
+        />
+
+        <FloatCard
+          icon="📚"
+          title="WAEC Certified"
+          sub="Approved Curriculum"
+          delay="float-card-2"
+        />
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll */}
       <div
         aria-hidden="true"
-        className="absolute bottom-9 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 z-10"
+        className="absolute bottom-9 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5"
       >
-        <span className="text-[0.7rem] text-white/40 uppercase tracking-widest">Scroll</span>
-        <div className="w-5.5 h-9 border-2 border-white/30 rounded-xl flex justify-center pt-1.5">
-          <div className="w-1 h-2 bg-white/50 rounded-sm scroll-dot" />
+        <span className="text-[0.7rem] uppercase tracking-widest text-white/40">
+          Scroll
+        </span>
+
+        <div className="flex h-9 w-5.5 justify-center rounded-xl border-2 border-white/30 pt-1.5">
+          <div className="scroll-dot h-2 w-1 rounded-sm bg-white/50" />
         </div>
       </div>
     </section>

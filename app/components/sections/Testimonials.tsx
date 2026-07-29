@@ -2,8 +2,8 @@
 
 import { TESTIMONIALS } from "@/app/lib/constants";
 import { useState, useCallback } from "react";
-import { SectionLabel } from "./SectionLabel";
 import { cn } from "@/app/lib/utils";
+import { SectionLabel } from "../uis/SectionLabel";
 
 
 export function Testimonials() {

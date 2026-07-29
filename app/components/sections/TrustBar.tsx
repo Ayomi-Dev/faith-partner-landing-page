@@ -8,8 +8,8 @@ export function TrustBar() {
           {TRUST_BADGES.map((b) => (
             <div
               key={b.label}
-              className="flex items-center gap-2 bg-white/8 border border-white/12
-                         rounded-lg px-4 py-2 font-head text-[0.8rem] font-semibold text-white/90"
+              className="flex items-center gap-2 bg-(--navy-dark) border border-white/12
+                rounded-lg px-4 py-2 font-head text-[0.8rem] font-semibold text-white/90"
             >
               <span role="img" aria-label={b.label}>{b.icon}</span>
               {b.label}
