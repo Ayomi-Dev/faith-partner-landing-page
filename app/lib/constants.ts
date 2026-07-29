@@ -233,3 +233,25 @@ export const FAQS = [
     a: "Every parent gets access to the Greenfield Parent Portal — real-time attendance, academic scores, report cards, fee balances, and announcements. Credentials are provided at enrolment.",
   },
 ] as const;
+
+export const STEPS = [
+  {
+    num: "1",
+    color: "bg-navy text-white",
+    title: "Apply Online",
+    desc: "Complete our online application form with your child's details, academic history, and preferred entry class.",
+  },
+  {
+    num: "2",
+    color: "bg-gold text-navy-dark",
+    title: "Entrance Assessment",
+    desc: "Your child attends a friendly, age-appropriate assessment to help us understand how best to support their learning journey.",
+  },
+  {
+    num: "3",
+    color: "bg-emerald text-white",
+    title: "Welcome to Greenfield",
+    desc: "Receive your offer letter, complete enrolment, and prepare for the first day of an extraordinary school experience.",
+  },
+] as const;
+ 
