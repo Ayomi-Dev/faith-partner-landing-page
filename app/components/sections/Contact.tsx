@@ -6,10 +6,12 @@ import { Button } from "@/app/components/uis/Button";
 import { cn } from "@/app/lib/utils";
 
 const INFO = [
-  { icon: "📍", label: "Address", content: "12 Excellence Road, Lekki Phase 1\nLagos State, Nigeria" },
-  { icon: "📞", label: "Phone", content: "+234 800 000 0000\n+234 801 111 1111", isPhone: true },
+  { icon: "📍", label: "Address", 
+    content: `1, Faith Partners close, via Olorunsogo road, by Suru block b/stop, Matogbun Olambe Akute road, Ogun State, Nigeria` 
+  },
+  { icon: "📞", label: "Phone", content: "+234 8035820159\n+234 8023126905", isPhone: true },
   { icon: "💬", label: "WhatsApp", content: "+234 800 000 0000", isWhatsApp: true },
-  { icon: "✉️", label: "Email", content: "admissions@greenfieldacademy.edu.ng", isEmail: true },
+  { icon: "✉️", label: "Email", content: "admissions@faithpartners.edu.ng", isEmail: true },
 ];
 
 const HOURS = [

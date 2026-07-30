@@ -119,7 +119,8 @@ export function Navbar() {
                 {PORTAL_LINKS.map((p) => (
                   <a
                     key={p.role}
-                    href={`${SAAS_BASE}?role=${p.role}`}
+                    // href={`${SAAS_BASE}?role=${p.role}`}
+                    href={`/login`}
                     role="menuitem"
                     target="_blank"
                     rel="noopener noreferrer"

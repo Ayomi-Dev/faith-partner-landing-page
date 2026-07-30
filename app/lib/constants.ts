@@ -139,7 +139,7 @@ export const TESTIMONIALS = [
     avatarText: "text-navy-dark",
   },
   {
-    quote: "I'm now studying Computer Science at UNILAG. My coding skills, discipline, and ambition were all built at Greenfield. This school is the real deal.",
+    quote: "I'm now studying Computer Science at UNILAG. My coding skills, discipline, and ambition were all built at Lordfaith Partner. This school is the real deal.",
     name: "Chidi Umezurike",
     role: "Alumni — Class of 2021, UNILAG",
     initials: "CU",
@@ -165,16 +165,16 @@ export const NEWS_ITEMS = [
   {
     emoji: "📚",
     bg: "from-blue-50 to-blue-100",
-    date: "December 10, 2024",
+    date: "August 10, 2025",
     tag: "News",
     tagStyle: "bg-blue-100 text-blue-800",
-    title: "Greenfield Students Sweep State-Wide WAEC Excellence Awards",
+    title: "Lordfaith Partner Students Sweep State-Wide WAEC Excellence Awards",
     excerpt: "Twelve of our SS3 graduates achieved A1 across all subjects — the highest in the school's history.",
   },
   {
     emoji: "📅",
     bg: "from-green-50 to-green-100",
-    date: "January 15, 2025",
+    date: "January 15, 2026",
     tag: "Event",
     tagStyle: "bg-green-100 text-green-800",
     title: "Open Day & School Tour — Register Your Spot Now",
@@ -183,27 +183,12 @@ export const NEWS_ITEMS = [
   {
     emoji: "🎓",
     bg: "from-yellow-50 to-yellow-100",
-    date: "February 5, 2025",
+    date: "February 5, 2026",
     tag: "Announcement",
     tagStyle: "bg-yellow-100 text-yellow-800",
     title: "2025 Entrance Examination — Registration Now Open",
-    excerpt: "Registration for the 2025/2026 academic session entrance exam is open for Primary 1, JSS1, and SS1.",
+    excerpt: "Registration for the 2026/2027 academic session entrance exam is open for Primary 1, JSS1, and SS1.",
   },
-] as const;
-
-export const GALLERY_ITEMS = [
-  { emoji: "🏫", bg: "from-blue-900 to-blue-600", cat: "campus", h: "h-56" },
-  { emoji: "📖", bg: "from-emerald-900 to-emerald-600", cat: "academics", h: "h-40" },
-  { emoji: "⚽", bg: "from-green-900 to-green-700", cat: "sports", h: "h-48" },
-  { emoji: "🎓", bg: "from-amber-900 to-amber-700", cat: "graduation", h: "h-60" },
-  { emoji: "🎭", bg: "from-violet-900 to-violet-700", cat: "events", h: "h-44" },
-  { emoji: "🔬", bg: "from-indigo-900 to-indigo-700", cat: "academics", h: "h-52" },
-  { emoji: "🏛️", bg: "from-sky-900 to-sky-700", cat: "campus", h: "h-44" },
-  { emoji: "🏆", bg: "from-red-900 to-red-700", cat: "sports", h: "h-36" },
-  { emoji: "🎵", bg: "from-teal-900 to-teal-700", cat: "events", h: "h-52" },
-  { emoji: "🏅", bg: "from-purple-900 to-purple-600", cat: "graduation", h: "h-48" },
-  { emoji: "🛝", bg: "from-stone-800 to-stone-600", cat: "campus", h: "h-48" },
-  { emoji: "💻", bg: "from-cyan-900 to-cyan-700", cat: "academics", h: "h-40" },
 ] as const;
 
 export const FAQS = [
@@ -236,20 +221,20 @@ export const FAQS = [
 export const STEPS = [
   {
     num: "1",
-    color: "bg-navy text-white",
+    color: "bg-(--navy) text-white",
     title: "Apply Online",
     desc: "Complete our online application form with your child's details, academic history, and preferred entry class.",
   },
   {
     num: "2",
-    color: "bg-gold text-navy-dark",
+    color: "bg-(--gold) text-(--navy-dark)",
     title: "Entrance Assessment",
     desc: "Your child attends a friendly, age-appropriate assessment to help us understand how best to support their learning journey.",
   },
   {
     num: "3",
-    color: "bg-emerald text-white",
-    title: "Welcome to Greenfield",
+    color: "bg-(--emerald) text-white",
+    title: "Welcome to LordFaith Partners",
     desc: "Receive your offer letter, complete enrolment, and prepare for the first day of an extraordinary school experience.",
   },
 ] as const;

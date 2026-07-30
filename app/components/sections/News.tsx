@@ -13,7 +13,7 @@ export function News() {
           <div>
             <SectionLabel>News &amp; Events</SectionLabel>
             <h2 className="font-head font-bold text-navy text-3xl sm:text-4xl leading-tight">
-              Latest from Campus
+              Latest
             </h2>
           </div>
           <Button href="#" variant="outline" size="sm">View All News</Button>

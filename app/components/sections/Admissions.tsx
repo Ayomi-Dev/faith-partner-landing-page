@@ -32,7 +32,7 @@ export function Admissions() {
             <div key={step.num} className={`reveal text-center ${i === 1 ? "delay-1" : i === 2 ? "delay-2" : ""}`}>
               <div
                 className={`w-18 h-18 rounded-full mx-auto mb-5 flex items-center justify-center
-                             font-head font-extrabold text-2xl border-4 border-gray-50 shadow-card relative z-10
+                             font-head font-extrabold text-2xl border-4 border-gray-50 shadow(--shadow-md) relative z-10
                              ${step.color}`}
               >
                 {step.num}
@@ -45,7 +45,7 @@ export function Admissions() {
 
         {/* CTA */}
         <div className="text-center mt-14 reveal">
-          <Button href="#contact" size="lg">
+          <Button href="#contact" variant="outline" size="lg">
             Start Your Application Today
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
               <path d="M9 5l7 7-7 7" />
@@ -53,8 +53,8 @@ export function Admissions() {
           </Button>
           <p className="mt-4 text-sm text-gray-500">
             Applications open year-round. Enquiries:{" "}
-            <a href="tel:+2348000000000" className="text-navy font-semibold hover:underline">
-              +234 800 000 0000
+            <a href="tel:+2348035820159" className="text-navy font-semibold hover:underline">
+              +234 8035820159
             </a>
           </p>
         </div>
