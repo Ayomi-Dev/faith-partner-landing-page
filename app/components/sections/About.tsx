@@ -147,7 +147,7 @@ export function About() {
               ))}
           </div>
           {/* Image column */}
-          <div className="relative gap-4 mb-4">
+          <div className="relative gap-4 mt-5 mb-4">
             <div className="flex flex-col sm:flex-row gap-5">
             <Image 
                 src={Chairman} 
@@ -166,7 +166,7 @@ export function About() {
                 <h4 className="font-head font-bold text-(--navy) sm:text-2xl leading-tight mb-4">
                   Meet The Chairman
                 </h4>
-                <p className="text-gray-500 mb-7 ">
+                <p className="text-gray-500 mb-7 text-[0.8rem] ">
                   Dr. Alaba G. Olusemore is a distinguished finance expert,
                   economist, and leadership consultant with over three
                   decades of impactful service across Africa’s financial and
@@ -188,12 +188,12 @@ export function About() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row">
+            <div className="flex gap-5 flex-col sm:flex-row">
               <div className="flex flex-col justify-center items-center">
                 <h4 className="font-head font-bold text-(--navy) sm:text-2xl leading-tight mb-4">
                   Meet The Proprietor
                 </h4>
-                <p className="text-gray-500 mb-7">
+                <p className="text-gray-500 mb-7 text-[0.8rem]">
                   Mrs. Funmilayo Olusemore is a seasoned educator and the
                   dedicated proprietress of Lordfaith Partners Private
                   School. A graduate of the University of Lagos, she holds an

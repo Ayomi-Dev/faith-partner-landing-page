@@ -10,7 +10,7 @@ export function Facilities() {
         <div className="mb-12 reveal">
           <SectionLabel>Facilities</SectionLabel>
           <h2 className="font-head font-bold text-navy text-3xl sm:text-4xl leading-tight mb-3">
-            World-Class Spaces for World-Class Learning
+             Condusive Environment for Well Structured Learning
           </h2>
           <p className="text-gray-500 max-w-120 leading-relaxed">
             Every environment is purpose-built to inspire, challenge, and support your child&apos;s best work.

@@ -38,16 +38,15 @@ export const STATS = [
 export const WHY_CARDS = [
   { icon: "🎓", title: "Academic Excellence", desc: "Rigorous curriculum with consistent top-tier national exam results." },
   { icon: "👩‍🏫", title: "Experienced Teachers", desc: "150+ certified educators with a passion for transformational teaching." },
-  { icon: "🏫", title: "Modern Classrooms", desc: "Smart interactive classrooms designed for 21st-century learning." },
-  { icon: "💻", title: "Computer Labs", desc: "State-of-the-art ICT facilities with high-speed internet access." },
-  { icon: "🔬", title: "Science Labs", desc: "Fully equipped biology, chemistry and physics laboratories." },
+  { icon: "🏫", title: "Condusive Classrooms", desc: "Smart interactive classrooms designed for today's learning." },
+  { icon: "💻", title: "Computer Lab", desc: "ICT facility with dedicated instructors." },
+  { icon: "🔬", title: "Science Lab", desc: "Fully equipped biology, chemistry and physics laboratories." },
   { icon: "⚽", title: "Sports Development", desc: "Championship-winning sports programmes across multiple disciplines." },
   { icon: "🎨", title: "Music & Arts", desc: "Creative expression through music, fine arts, drama, and culture." },
   { icon: "🌱", title: "Character Development", desc: "Values-based education grounded in integrity, service, and faith." },
   { icon: "👑", title: "Leadership Training", desc: "Student council, prefect system, and mentorship programmes." },
   { icon: "📚", title: "Moral Instruction", desc: "Weekly faith and values classes building compassionate citizens." },
   { icon: "🧑‍🤝‍🧑", title: "Small Class Sizes", desc: "Maximum 25 students per class ensures personal attention for all." },
-  { icon: "🚌", title: "Safe Transportation", desc: "GPS-tracked school buses covering all major routes." },
 ] as const;
 
 export const PROGRAMS = [
@@ -56,13 +55,13 @@ export const PROGRAMS = [
     gradient: "from-yellow-50 to-yellow-200",
     level: "Foundation",
     ages: "Ages 1 – 4",
-    title: "Nursery School",
+    title: "Creche & Nursery School",
     desc: "Play-based learning that builds motor skills, social intelligence, and early literacy in a nurturing, joyful environment.",
   },
   {
     emoji: "✏️",
     gradient: "from-green-50 to-green-200",
-    level: "Primary Education",
+    level: "Primary 1 - 5",
     ages: "Ages 5 – 11",
     title: "Primary School",
     desc: "A strong academic foundation in literacy, numeracy, sciences, and the arts — delivered through active, child-centred pedagogy.",
@@ -71,7 +70,7 @@ export const PROGRAMS = [
     emoji: "📐",
     gradient: "from-blue-50 to-blue-200",
     level: "JSS 1 – 3",
-    ages: "Ages 11 – 14",
+    ages: "Ages 11 – 13",
     title: "Junior Secondary",
     desc: "Broadening intellectual horizons with BECE-aligned curriculum, extracurriculars, and leadership development programmes.",
   },
@@ -79,7 +78,7 @@ export const PROGRAMS = [
     emoji: "📖",
     gradient: "from-purple-50 to-purple-200",
     level: "SS 1 – 3",
-    ages: "Ages 14 – 18",
+    ages: "Ages 13 – 18",
     title: "Senior Secondary",
     desc: "Science, Arts & Commercial tracks. Intensive WAEC/NECO preparation with a 98% first-attempt pass rate.",
   },
@@ -88,8 +87,8 @@ export const PROGRAMS = [
     gradient: "from-orange-50 to-orange-200",
     level: "Extended Learning",
     ages: "All Ages",
-    title: "After-School Programs",
-    desc: "Tutoring, coding clubs, music lessons, robotics, and enrichment activities for holistic development beyond the bell.",
+    title: "Extra Curricular Programs",
+    desc: "Tutoring, coding clubs, music lessons, and enrichment activities for holistic development beyond the bell.",
   },
   {
     emoji: "🎯",
@@ -102,8 +101,8 @@ export const PROGRAMS = [
 ] as const;
 
 export const FACILITIES = [
-  { emoji: "🔬", bg: "from-blue-900 to-blue-600", label: "Science Laboratories", sub: "3 fully-equipped labs", wide: true },
-  { emoji: "💻", bg: "from-emerald-900 to-emerald-600", label: "ICT Computer Lab", sub: "80 workstations, fibre internet", wide: false },
+  { emoji: "🔬", bg: "from-blue-900 to-blue-600", label: "Science Laboratories", sub: "Well-equipped labs", wide: true },
+  { emoji: "💻", bg: "from-emerald-900 to-emerald-600", label: "ICT Computer Lab", sub: "Workstations and active internet", wide: false },
   { emoji: "📚", bg: "from-amber-900 to-amber-600", label: "Library", sub: "10,000+ volumes", wide: false },
   { emoji: "🎵", bg: "from-violet-900 to-violet-700", label: "Music Room", sub: "Instruments & recording studio", wide: false },
   { emoji: "⚽", bg: "from-green-900 to-green-600", label: "Sports Field", sub: "Football, athletics & courts", wide: false },
@@ -125,7 +124,7 @@ export const LIFE_ACTIVITIES = [
 
 export const TESTIMONIALS = [
   {
-    quote: "Greenfield didn't just educate my daughter — they shaped her character. She came out disciplined, confident, and with the highest score in our state's WAEC. I couldn't be prouder.",
+    quote: "LordFaith Partner didn't just educate my daughter. They shaped her character. She came out disciplined, confident, and with the highest score in our state's WAEC. I couldn't be prouder.",
     name: "Adaeze Nwosu",
     role: "Parent — JSS3 to SS3 Journey",
     initials: "AN",

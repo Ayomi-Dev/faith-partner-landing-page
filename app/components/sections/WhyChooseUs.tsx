@@ -8,12 +8,12 @@ export function WhyChooseUs() {
     <section id="why" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14 reveal">
-          <SectionLabel>Why Greenfield</SectionLabel>
+          <SectionLabel>Why LordFaith Partner?</SectionLabel>
           <h2 className="font-head font-bold text-navy text-3xl sm:text-4xl leading-tight mb-4">
             Built for Every Dimension of Your Child&apos;s Growth
           </h2>
-          <p className="text-gray-500 max-w-130 mx-auto leading-relaxed">
-            We go beyond textbooks — our approach develops the whole child: mind, character, creativity, and confidence.
+          <p className="text-gray-500 max-w-130 text-[0.8rem] mx-auto leading-relaxed">
+            We go beyond textbooks — our approach develops the whole child's mind, character, creativity, and confidence.
           </p>
         </div>
 
@@ -23,7 +23,7 @@ export function WhyChooseUs() {
               key={card.title}
               className={cn(
                 "reveal bg-white border border-gray-100 rounded-xl p-6 group",
-                "hover:-translate-y-1.5 hover:shadow-card-hover hover:border-gold transition-all duration-300 cursor-default",
+                "hover:-translate-y-1.5 hover:shadow-(--shadow-sm) hover:border-(--gold) transition-all duration-300 cursor-default",
                 i % 4 === 1 && "delay-1",
                 i % 4 === 2 && "delay-2",
                 i % 4 === 3 && "delay-3",
