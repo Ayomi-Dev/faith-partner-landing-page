@@ -6,6 +6,7 @@ import { cn } from "@/app/lib/utils";
 import { NAV_LINKS, PORTAL_LINKS } from "@/app/lib/constants";
 import Image from "next/image";
 import Logo from "@/public/assets/images/logo.jpeg"
+import { Button } from "../uis/Button";
 
 const SAAS_BASE = "https://app.schoolms.io/login";
 
@@ -49,7 +50,7 @@ export function Navbar() {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
             ? "bg-(--navy-dark) shadow-lg"
-            : "bg-transparent"
+            : `md:bg-transparent ${mobileOpen && "bg-(--navy-dark)"}`
         )}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300"
@@ -168,31 +169,35 @@ export function Navbar() {
             </a>
           ))}
           <div className="flex flex-col gap-3 mt-6">
-            <a href="#admissions" onClick={closeMobile}
-              className="bg-gold text-navy-dark font-head font-bold text-center py-3.5 rounded-xl hover:bg-gold-dark transition-colors">
-              Apply Now
-            </a>
-            <a href={SAAS_BASE} target="_blank" rel="noopener noreferrer"
-              className="border-2 border-white/50 text-white font-head font-semibold text-center py-3.5 rounded-xl hover:bg-white/10 transition-colors">
+            <Button variant="primary" size="sm">
+              <a href="#admissions" onClick={closeMobile} className="text-(--gold)">
+                Apply Now
+              </a>
+            </Button>
+            <h3 className="border-2 border-white/50 text-white font-head font-semibold text-center py-3.5 rounded-xl hover:bg-white/10 transition-colors"
+              onClick={() => setPortalOpen((p) => !p)}
+            >
               Portal Login
-            </a>
+            </h3>
           </div>
 
           {/* Portal role list on mobile */}
-          <div className="mt-6">
-            <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-3 font-head">Portals</p>
-            {PORTAL_LINKS.map((p) => (
-              <a
-                key={p.role}
-                href={`${SAAS_BASE}?role=${p.role}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 py-2.5 text-sm text-white/70 hover:text-gold transition-colors"
-              >
-                <span className="text-lg">{p.emoji}</span> {p.label}
-              </a>
-            ))}
-          </div>
+          {portalOpen && (
+            <div className="mt-6">
+              <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-3 font-head">Portals</p>
+              {PORTAL_LINKS.map((p) => (
+                <a
+                  key={p.role}
+                  href={`${SAAS_BASE}?role=${p.role}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 py-2.5 text-sm text-white/70 hover:text-gold transition-colors"
+                >
+                  <span className="text-lg">{p.emoji}</span> {p.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>

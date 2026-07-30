@@ -147,7 +147,7 @@ export function About() {
               ))}
           </div>
           {/* Image column */}
-          <div className="relative gap-4">
+          <div className="relative gap-4 mb-4">
             <div className="flex flex-col sm:flex-row gap-5">
             <Image 
                 src={Chairman} 
@@ -225,9 +225,11 @@ export function About() {
               <p className="text-[0.72rem] font-semibold opacity-80 mt-1 uppercase tracking-wide">Years of Excellence</p>
             </div> */}
           </div>
-          <Button href="#programs" variant="outline">
-            Explore Our Programs
-          </Button>
+          <div className="flex items-center justify-center mt-4">
+            <Button href="#programs" variant="outline">
+              Explore Our Programs
+            </Button>
+          </div>
           
       </div>
     </section>
