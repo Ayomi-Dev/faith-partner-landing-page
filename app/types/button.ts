@@ -15,11 +15,11 @@ export interface ButtonProps {
 
 export const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-gold text-navy-dark hover:bg-gold-dark hover:shadow-gold hover:-translate-y-0.5",
+    "bg-gold text-white border-2 border-(--gold-dark)/70 hover:bg-(--gold-dark) hover:text-white hover:-translate-y-0.5",
   secondary:
     "bg-transparent text-white border-2 border-white/70 hover:bg-white/10 hover:border-white",
   outline:
-    "bg-transparent text-navy border-2 border-navy hover:bg-navy hover:text-white",
+    "bg-transparent text-navy border-2 border-(--navy) hover:bg-(--navy) hover:text-white",
   ghost:
     "bg-transparent text-navy-dark hover:bg-gray-100",
   emerald:

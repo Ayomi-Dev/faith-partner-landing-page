@@ -47,7 +47,7 @@ export function Hero() {
 
         {/* Buttons */}
         <div className="mb-14 flex flex-wrap gap-3.5">
-          <Button href="#admissions" variant="secondary" className="text-(--gold)" size="lg">
+          <Button href="#admissions" variant="primary" className="text-(--gold)" size="lg">
             <Arrow />
             Apply for Admission
           </Button>
