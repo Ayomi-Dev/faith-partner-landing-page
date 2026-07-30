@@ -92,7 +92,7 @@ export function Contact() {
 
             {/* Map placeholder */}
             <div className="rounded-xl border border-gray-200 bg-blue-50 h-48 flex items-center justify-center text-sm text-navy font-medium mt-4">
-              📍 Google Maps — 12 Excellence Road, Lekki, Lagos
+              📍 Google Maps 
             </div>
           </div>
 

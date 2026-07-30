@@ -4,7 +4,7 @@ export function BigCTA() {
   return (
     <section
       id="cta"
-      className="relative py-24 text-center overflow-hidden bg-cta-gradient"
+      className="relative py-24 text-center overflow-hidden bg-(--navy)"
     >
       {/* Radial glow */}
       <div
@@ -18,7 +18,7 @@ export function BigCTA() {
           Give Your Child the Best Start.
         </h2>
         <p className="text-white/70 text-lg mb-10">
-          Enrolment for the 2025 / 2026 academic session is now open. Places are limited — don&apos;t wait.
+          Enrolment for the 2026/2027 academic session is now open. Places are limited — don&apos;t wait.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button href="#contact" size="lg">Apply Now</Button>

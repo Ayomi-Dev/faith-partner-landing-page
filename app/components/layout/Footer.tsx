@@ -90,7 +90,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[0.8rem] text-gray-600">
-            © {new Date().getFullYear()} Greenfield Academy. All rights reserved.
+            © {new Date().getFullYear()} Lordfaith Partners. All rights reserved.
           </p>
           <div className="flex gap-5">
             {["Privacy Policy", "Terms of Use", "Safeguarding Policy"].map((l) => (

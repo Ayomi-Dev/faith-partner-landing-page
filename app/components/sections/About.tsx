@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "../uis/Button";
 import { SectionLabel } from "../uis/SectionLabel";
 import Chairman from "@/public/assets/images/chairman.jpeg"
+// import Link from "@/public/"
 
 
 const CORE_VALUES = [
@@ -225,10 +226,13 @@ export function About() {
               <p className="text-[0.72rem] font-semibold opacity-80 mt-1 uppercase tracking-wide">Years of Excellence</p>
             </div> */}
           </div>
-          <div className="flex items-center justify-center mt-4">
+          <div className="flex gap-5 items-center justify-center mt-4">
             <Button href="#programs" variant="outline">
               Explore Our Programs
             </Button>
+            {/* <Button variant="secondary" href=""> */}
+            <a target="_blank" href="./public/handbook.pdf" className="p-3 text-(--gold)" download>Download Handbook</a>
+            {/* </Button> */}
           </div>
           
       </div>
