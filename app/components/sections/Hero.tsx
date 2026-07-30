@@ -33,19 +33,16 @@ export function Hero() {
         >
           Building{" "}
           <span style={{ color: "var(--gold)" }}>
-            Tomorrow&apos;s
+            Godly{" "}
           </span>
+          People,
           <br />
-          Leaders Through
-          <br />
-          Quality Education
+          Building The Nation
         </h1>
 
         {/* Description */}
         <p className="mb-10 max-w-180 text-base leading-relaxed text-white/75 sm:text-lg">
-          We nurture excellence, character, creativity, and innovation from
-          Nursery through Secondary School — shaping futures one student at a
-          time.
+          We are building leaders, thinkers, and builders of a better Nigeria.
         </p>
 
         {/* Buttons */}

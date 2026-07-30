@@ -62,7 +62,7 @@ export function Navbar() {
             </div>
             <div className="leading-tight">
               <p className="font-head font-bold text-white text-[1rem]">Lordfaith Partner</p>
-              <p className="text-white/60 text-[0.65rem] tracking-wide">Excellence in Education</p>
+              <p className="text-white/60 text-[0.65rem] tracking-wide">Building Godly People, Building the Nation</p>
             </div>
           </Link>
 
