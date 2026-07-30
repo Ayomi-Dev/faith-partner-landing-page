@@ -1,9 +1,10 @@
 "use client";
 
-import { GALLERY_ITEMS } from "@/app/lib/constants";
+import { GALLERY_ITEMS } from "@/app/lib/datas";
 import { useState } from "react";
 import { SectionLabel } from "../uis/SectionLabel";
 import { cn } from "@/app/lib/utils";
+import Image from "next/image";
 
 
 const CATS = ["all", "campus", "academics", "sports", "events", "graduation"] as const;
@@ -13,6 +14,7 @@ export function Gallery() {
   const [active, setActive] = useState<Cat>("all");
 
   const visible = GALLERY_ITEMS.filter((g) => active === "all" || g.cat === active);
+  const randomVisble = visible.sort(() => Math.random() - 0.5) 
 
   return (
     <section id="gallery" className="py-24 bg-gray-50">
@@ -20,7 +22,7 @@ export function Gallery() {
         <div className="text-center mb-10 reveal">
           <SectionLabel>Gallery</SectionLabel>
           <h2 className="font-head font-bold text-navy text-3xl sm:text-4xl leading-tight">
-            Life at Greenfield in Pictures
+            Life at LordFaith Partners in Pictures
           </h2>
         </div>
 
@@ -33,7 +35,7 @@ export function Gallery() {
               className={cn(
                 "px-4 py-2 rounded-full border font-head text-sm font-semibold transition-all capitalize",
                 active === cat
-                  ? "bg-navy text-white border-navy"
+                  ? "bg-(--navy) text-white border-(--navy)"
                   : "bg-white text-gray-500 border-gray-200 hover:border-navy hover:text-navy"
               )}
             >
@@ -43,21 +45,26 @@ export function Gallery() {
         </div>
 
         {/* Masonry grid — using CSS columns */}
-        <div className="columns-2 sm:columns-3 lg:columns-4 gap-3 reveal">
-          {visible.map((item) => (
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 reveal">
+          {randomVisble.map((item, index) => (
             <div
-              key={`${item.cat}-${item.emoji}`}
+              key={index}
               className="break-inside-avoid mb-3 rounded-xl overflow-hidden relative group cursor-pointer"
             >
               <div
                 className={cn(
-                  "flex items-center justify-center text-4xl transition-transform duration-500 group-hover:scale-105 bg-linear-to-br",
-                  item.bg,
+                  "flex items-center justify-center text-4xl transition-transform duration-500 group-hover:scale-105",
                   item.h
                 )}
                 aria-hidden="true"
               >
-                {item.emoji}
+               <Image 
+                src={item.img} 
+                width={0} height={0} 
+                style={{ width: "100%", height: "100%"}} 
+                alt={item.cat}
+                loading="eager"
+              />
               </div>
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-navy-dark/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
