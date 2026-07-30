@@ -5,41 +5,11 @@ export function Hero() {
     <section
       id="hero"
       aria-label="Hero"
-      className="relative flex min-h-svh items-center overflow-hidden bg-(--navy-dark)"
+      className="relative flex min-h-svh items-center overflow-hidden bg-(--navy-dark) "
     >
-      {/* Diagonal gold slash */}
-      <div
-        aria-hidden="true"
-        className="hero-slash absolute top-[-10%] right-[-5%] h-[130%] w-[55%] bg-(--gold) opacity-[0.06]"
-      />
-
-      {/* Dot grid */}
-      <div
-        aria-hidden="true"
-        className="dot-grid absolute inset-0"
-      />
-
-      {/* Illustration */}
-      <div
-        aria-hidden="true"
-        className="absolute top-0 right-0 bottom-0 hidden w-[48%] overflow-hidden lg:block"
-      >
-        <div className="fade-left absolute top-0 bottom-0 left-0 z-10 w-28" />
-
-        <div
-          className="flex h-full w-full items-center justify-center bg-linear-to-br"
-          // style={{
-          //   backgroundImage:
-          //     "linear-gradient(to bottom right, var(--navy-light), var(--navy-dark))",
-          // }}
-        >
-          <SchoolIllustration />
-        </div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
-        {/* Eyebrow */}
+        Eyebrow
         <div
           className="mb-7 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-widest"
           style={{
@@ -80,7 +50,7 @@ export function Hero() {
 
         {/* Buttons */}
         <div className="mb-14 flex flex-wrap gap-3.5">
-          <Button href="#admissions" size="lg">
+          <Button href="#admissions" variant="secondary" className="text-(--gold)" size="lg">
             <Arrow />
             Apply for Admission
           </Button>
@@ -143,20 +113,6 @@ export function Hero() {
           sub="Approved Curriculum"
           delay="float-card-2"
         />
-      </div>
-
-      {/* Scroll */}
-      <div
-        aria-hidden="true"
-        className="absolute bottom-9 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5"
-      >
-        <span className="text-[0.7rem] uppercase tracking-widest text-white/40">
-          Scroll
-        </span>
-
-        <div className="flex h-9 w-5.5 justify-center rounded-xl border-2 border-white/30 pt-1.5">
-          <div className="scroll-dot h-2 w-1 rounded-sm bg-white/50" />
-        </div>
       </div>
     </section>
   );

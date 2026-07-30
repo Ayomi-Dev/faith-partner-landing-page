@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { cn } from "@/app/lib/utils";
 import { NAV_LINKS, PORTAL_LINKS } from "@/app/lib/constants";
+import Image from "next/image";
+import Logo from "@/public/assets/images/logo.jpeg"
 
 const SAAS_BASE = "https://app.schoolms.io/login";
 
@@ -54,12 +56,12 @@ export function Navbar() {
           style={{ padding: scrolled ? "13px 24px" : "18px 24px" }}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5" aria-label="Greenfield Academy home">
+          <Link href="/" className="flex items-center gap-2.5" aria-label="Lordfaith home">
             <div className="w-10 h-10 rounded-xl bg-gold flex items-center justify-center font-head font-extrabold text-lg text-navy-dark select-none">
-              G
+              <Image src={Logo} width={50} height={50} alt="School Logo"/>
             </div>
             <div className="leading-tight">
-              <p className="font-head font-bold text-white text-[1rem]">Greenfield Academy</p>
+              <p className="font-head font-bold text-white text-[1rem]">Lordfaith Partner</p>
               <p className="text-white/60 text-[0.65rem] tracking-wide">Excellence in Education</p>
             </div>
           </Link>
@@ -82,7 +84,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-2.5">
             <a
               href="#admissions"
-              className="bg-gold text-navy-dark font-head font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-gold-dark transition-colors"
+              className="bg-gold text-(--gold) font-head font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-gold-dark transition-colors"
             >
               Apply Now
             </a>
@@ -149,7 +151,7 @@ export function Navbar() {
       {/* Mobile menu overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-navy-dark flex flex-col transition-transform duration-350",
+          "fixed inset-0 z-40 bg-navy-dark flex flex-col transition-transform duration-350 bg-(--navy-dark)",
           mobileOpen ? "translate-x-0" : "translate-x-full"
         )}
         aria-hidden={!mobileOpen}

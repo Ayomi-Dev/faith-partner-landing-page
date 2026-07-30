@@ -147,11 +147,12 @@
     clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 
-  .dot-grid {
-    background-image: radial-gradient(circle,
-        rgba(255, 255, 255, .04) 1px,
-        transparent 1px);
-    background-size: 36px 36px;
+  #hero {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../public/school.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
   }
 
   .glass {
