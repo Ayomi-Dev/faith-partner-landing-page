@@ -11,14 +11,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gold flex items-center justify-center font-head font-extrabold text-navy-dark">
-                G
+              <div className="w-9 h-9 rounded-lg bg-(--gold) flex items-center justify-center font-head font-extrabold text-(--navy-dark)">
+                LFP
               </div>
-              <span className="font-head font-bold text-white text-[1rem]">Greenfield Academy</span>
+              <span className="font-head font-bold text-white text-[1rem]">Lordfaith Partners</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-6 max-w-70">
-              Building tomorrow&apos;s leaders through quality education, strong values, and a
-              nurturing community since 2009.
+              Building Godly People, Building the Nation
             </p>
             <div className="flex gap-2.5">
               {[
