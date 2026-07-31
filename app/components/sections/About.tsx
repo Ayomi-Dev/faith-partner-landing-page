@@ -21,14 +21,6 @@ const CORE_VALUES = [
           knowledge. We measure success by both character formation and intellectual achievement.`
   },
   {
-    title: "Passion for God",
-    desc: `We put God first in all we do, acknowledging Him as our
-    source. We pursue a vibrant personal relationship with God
-    through worship, prayer, and the Word.
-    We encourage godly values in learning, conduct, and
-    community life.`
-  },
-  {
     title: "Hard Work",
     desc: `We embrace diligence as a path to growth and distinction. 
       We reject shortcuts and commit to giving our best always.
