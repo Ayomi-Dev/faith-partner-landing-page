@@ -210,11 +210,11 @@ export const FAQS = [
   },
   {
     q: "Do you have boarding facilities?",
-    a: "Currently we operate as a day school. Boarding facilities are planned for the 2025/2026 academic session. Sign up to our newsletter to be notified when boarding enrolment opens.",
+    a: "Currently we operate as a day school. Boarding facilities are planned for the nearest future. Sign up to our newsletter to be notified when boarding enrolment opens.",
   },
   {
     q: "How can parents monitor their child's progress?",
-    a: "Every parent gets access to the Greenfield Parent Portal — real-time attendance, academic scores, report cards, fee balances, and announcements. Credentials are provided at enrolment.",
+    a: "Every parent gets access to the LordFaith Parent Portal — real-time attendance, academic scores, report cards, fee balances, and announcements. Credentials are provided at enrolment.",
   },
 ] as const;
 
