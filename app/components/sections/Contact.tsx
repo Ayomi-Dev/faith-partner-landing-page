@@ -149,7 +149,7 @@ export function Contact() {
                 />
               </div>
 
-              <button
+              <Button
                 type="submit"
                 className={cn(
                   "w-full flex items-center justify-center gap-2 font-head font-semibold text-[1rem] py-3.5 rounded-xl",
@@ -158,18 +158,19 @@ export function Contact() {
                     ? "bg-emerald text-white"
                     : "bg-gold text-navy-dark hover:bg-gold-dark hover:shadow-gold hover:-translate-y-0.5"
                 )}
+                variant="primary"
               >
                 {sent ? (
                   "Message Sent ✓"
                 ) : (
-                  <Button variant="outline">
+                  <>
                     Send Message
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
                     </svg>
-                  </Button>
+                  </>
                 )}
-              </button>
+              </Button>
             </form>
           </div>
         </div>

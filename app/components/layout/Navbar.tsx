@@ -7,6 +7,7 @@ import { NAV_LINKS, PORTAL_LINKS } from "@/app/lib/constants";
 import Image from "next/image";
 import Logo from "@/public/assets/images/logo.jpeg"
 import { Button } from "../uis/Button";
+import { useRouter } from "next/navigation";
 
 const SAAS_BASE = "https://app.schoolms.io/login";
 
@@ -15,6 +16,11 @@ export function Navbar() {
   const [portalOpen, setPortalOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const portalRef = useRef<HTMLDivElement>(null);
+  const router = useRouter()
+
+  const pc = () => {
+    console.log("checked")
+  }
 
   /* Scroll detection */
   useEffect(() => {
@@ -184,18 +190,16 @@ export function Navbar() {
 
           {/* Portal role list on mobile */}
           {portalOpen && (
-            <div className="mt-6">
+            <div className="mt-6 z-20">
               <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-3 font-head">Portals</p>
               {PORTAL_LINKS.map((p) => (
-                <a
+                <h3
                   key={p.role}
-                  href={`${SAAS_BASE}?role=${p.role}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={pc}
                   className="flex items-center gap-3 py-2.5 text-sm text-white/70 hover:text-gold transition-colors"
                 >
                   <span className="text-lg">{p.emoji}</span> {p.label}
-                </a>
+                </h3>
               ))}
             </div>
           )}

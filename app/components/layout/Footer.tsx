@@ -54,7 +54,7 @@ export function Footer() {
             <ul className="space-y-2.5">
               {PORTAL_LINKS.map((p) => (
                 <li key={p.role}>
-                  <a href={`${SAAS_BASE}?role=${p.role}`} target="_blank" rel="noopener noreferrer"
+                  <a href={`/login`} target="_blank" rel="noopener noreferrer"
                     className="text-sm text-gray-400 hover:text-gold transition-colors">
                     {p.label}
                   </a>
