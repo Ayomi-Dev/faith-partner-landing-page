@@ -202,7 +202,7 @@ export const FAQS = [
   },
   {
     q: "Do you provide school transportation?",
-    a: "Yes — GPS-tracked, air-conditioned buses with trained supervisors cover major routes. Transportation is an optional add-on during enrolment. Contact admissions for route details and pricing.",
+    a: "Not currently — Contact admissions for more details.",
   },
   {
     q: "What are the tuition fees?",
