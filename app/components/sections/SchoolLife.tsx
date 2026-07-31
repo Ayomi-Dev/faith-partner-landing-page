@@ -38,7 +38,7 @@ export function SchoolLife() {
           </div>
 
           {/* Right — visual panel */}
-          <div className="reveal-right">
+          <div className="reveal">
             <div className="relative rounded-2xl overflow-hidden bg-linear-to-br from-navy to-navy-light min-h-110 flex items-center justify-center">
               <span className="text-9xl opacity-20" aria-hidden="true">🎓</span>
 

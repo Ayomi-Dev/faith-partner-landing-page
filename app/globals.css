@@ -55,6 +55,7 @@
     background: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
+    border: 2px solid red;
   }
 
   * {
@@ -80,6 +81,9 @@
 
   ul {
     list-style: none;
+  }
+  section{
+    overflow: hidden;
   }
 }
 

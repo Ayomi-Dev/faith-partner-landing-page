@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Button } from "../uis/Button";
 import { SectionLabel } from "../uis/SectionLabel";
 import Chairman from "@/public/assets/images/chairman.jpeg"
-// import Link from "@/public/"
 
 
 const CORE_VALUES = [
