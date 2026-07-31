@@ -75,7 +75,7 @@ const CORE_VALUES = [
 export function About() {
   return (
     <section id="about" className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           <SectionLabel>About Us</SectionLabel>
         </div>
