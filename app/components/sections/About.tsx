@@ -232,11 +232,11 @@ export function About() {
               <p className="text-[0.72rem] font-semibold opacity-80 mt-1 uppercase tracking-wide">Years of Excellence</p>
             </div> */}
           </div>
-          <div className="flex gap-5 items-center mt-4">
+          <div className="flex gap-5 flex-wrap items-center mt-4">
             <Button href="#programs" variant="outline">
               Explore Our Programs
             </Button>
-            <Button variant="outline" href="" size="md">
+            <Button variant="primary" href="" size="md">
             <a
               href="/handbook.pdf"
               target="_blank"
