@@ -92,8 +92,15 @@ export function Contact() {
 
             {/* Map placeholder */}
             <div className="rounded-xl border border-gray-200 bg-blue-50 h-48 flex items-center justify-center text-sm text-navy font-medium mt-4">
-              📍 Google Maps 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7924.979661667232!2d3.3445846756697417!3d6.7099161005911245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b95e0401986ed%3A0x25c79b73d994dca2!2sMatogbun%20Community%20High%20School!5e0!3m2!1sen!2sng!4v1785456744788!5m2!1sen!2sng" 
+                width="100%" 
+                height="100%" 
+                loading="lazy"
+                style={{borderRadius: "15px"}}
+              >
+              </iframe>
             </div>
+            📍 Google Maps 
           </div>
 
           {/* Form column */}
@@ -155,12 +162,12 @@ export function Contact() {
                 {sent ? (
                   "Message Sent ✓"
                 ) : (
-                  <>
+                  <Button variant="outline">
                     Send Message
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
                     </svg>
-                  </>
+                  </Button>
                 )}
               </button>
             </form>

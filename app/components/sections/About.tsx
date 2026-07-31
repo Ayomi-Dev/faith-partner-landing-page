@@ -202,7 +202,13 @@ export function About() {
                   on child development and school leadership. Her teaching
                   career spans several years in reputable private schools,
                   where she rose to the position of Vice-Principal before
-                  establishing Lordfaith twelve years ago.
+                  establishing Lordfaith twelve years ago. As the heartbeat of the school, Mrs. Olusemore combines
+                  her deep love for children with her academic expertise and
+                  spiritual grounding to build a nurturing environment
+                  where pupils thrive. She is committed to mentoring staff,
+                  supporting families, and championing values-based
+                  education that prepares learners for excellence in life and
+                  eternity
                 </p>
               </div>
               <Image 
@@ -226,13 +232,21 @@ export function About() {
               <p className="text-[0.72rem] font-semibold opacity-80 mt-1 uppercase tracking-wide">Years of Excellence</p>
             </div> */}
           </div>
-          <div className="flex gap-5 items-center justify-center mt-4">
+          <div className="flex gap-5 items-center mt-4">
             <Button href="#programs" variant="outline">
               Explore Our Programs
             </Button>
-            {/* <Button variant="secondary" href=""> */}
-            <a target="_blank" href="./public/handbook.pdf" className="p-3 text-(--gold)" download>Download Handbook</a>
-            {/* </Button> */}
+            <Button variant="outline" href="" size="md">
+            <a
+              href="/handbook.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-(--gold)"
+              download
+            >
+              Download Our Handbook
+            </a>
+            </Button>
           </div>
           
       </div>
