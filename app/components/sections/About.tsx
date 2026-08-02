@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "../uis/Button";
 import { SectionLabel } from "../uis/SectionLabel";
 import Chairman from "@/public/assets/images/chairman.jpeg"
+import Proprietress from "@/public/assets/images/propritress.png"
 
 
 const CORE_VALUES = [
@@ -203,7 +204,7 @@ export function About() {
                 </p>
               </div>
               <Image 
-                src={Chairman} 
+                src={Proprietress} 
                 width={0} 
                 height={0} 
                 sizes="100vw" 
