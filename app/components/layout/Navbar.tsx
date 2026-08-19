@@ -127,7 +127,8 @@ export function Navbar() {
                     key={p.role}
                     target="_blank"
                     // href={`${SAAS_BASE}?role=${p.role}`}
-                    href={`http://faithschool.localhost:3000/auth/login?role=admin`}
+                    // href={`http://faithschool.localhost:3000/auth/login?role=admin`}
+                    href={`/login`}
                     role="menuitem"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
