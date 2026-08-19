@@ -7,7 +7,7 @@ import { cn } from "@/app/lib/utils";
 
 const INFO = [
   { icon: "📍", label: "Address", 
-    content: `1, Faith Partners close, via Olorunsogo road, by Suru block b/stop, Matogbun Olambe Akute road, Ogun State, Nigeria` 
+    content: `LORD FAITH PARTNERS PRIVATE SCHOOL, MATOGBUN, SURU BLOCK BUS STOP, NEAR ME AND YOU HOTEL.` 
   },
   { icon: "📞", label: "Phone", content: "+234 8035820159\n+234 8023126905", isPhone: true },
   { icon: "💬", label: "WhatsApp", content: "+234 800 000 0000", isWhatsApp: true },

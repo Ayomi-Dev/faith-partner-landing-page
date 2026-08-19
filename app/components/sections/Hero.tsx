@@ -1,115 +1,232 @@
-import { Button } from "@/app/components/uis/Button";
+"use client"
 
+import { Button } from "@/app/components/uis/Button";
+import { AnimatePresence, motion } from "motion/react";
+import H1 from "@/public/assets/images/home/home1.jpg"
+import H2 from "@/public/assets/images/home/home2.jpg"
+import H3 from "@/public/assets/images/home/home3.jpg"
+import H4 from "@/public/assets/images/home/home4.jpg"
+import H5 from "@/public/assets/images/home/home5.jpg"
+import H6 from "@/public/assets/images/home/home6.jpg"
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const slides = [
+  {
+    image: H6,
+    title: "Cultural Day Celebration",
+    description:
+      "Students proudly showcase Nigeria's rich cultural heritage through music, dance, fashion and food.",
+  },
+  {
+    image: H5,
+    title: "Inter-House Sports",
+    description:
+      "Competition, teamwork and sportsmanship come alive during our annual sporting events.",
+  },
+  {
+    image: H4,
+    title: "STEM & Innovation",
+    description:
+      "Hands-on science and technology projects inspire curiosity, creativity and problem-solving.",
+  },
+  {
+    image: H3,
+    title: "Music & Performing Arts",
+    description:
+      "Students develop confidence through drama, choir, dance and instrumental performances.",
+  },
+  {
+    image: H2,
+    title: "Music & Performing Arts",
+    description:
+      "Students develop confidence through drama, choir, dance and instrumental performances.",
+  },
+  {
+    image: H1,
+    title: "Music & Performing Arts",
+    description:
+      "Students develop confidence through drama, choir, dance and instrumental performances.",
+  },
+];
 export function Hero() {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrent((prev) => (prev + 1) % slides.length);
+      }, 5000);
+  
+      return () => clearInterval(timer);
+    }, []);
+
   return (
     <section
       id="hero"
       aria-label="Hero"
-      className="relative flex min-h-svh items-center overflow-hidden bg-(--navy-dark) "
+      className="relative flex min-h-svh items-center overflow-hidden "
     >
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
-        Eyebrow
-        <div
-          className="mb-7 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-widest"
-          style={{
-            background: "rgba(244,180,0,.15)",
-            borderColor: "rgba(244,180,0,.35)",
-            color: "var(--gold)",
-            fontFamily: "var(--font-head)",
+      {/* Underlay */}
+    <div className="absolute inset-0 z-0 overflow-hidden">
+
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={current}
+        className="absolute inset-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        {/* Ken Burns Effect */}
+        <motion.div
+          className="absolute inset-0"
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.12 }}
+          transition={{
+            duration: 5,
+            ease: "easeOut",
           }}
         >
-          <span
-            className="h-1.5 w-1.5 rounded-full"
-            style={{ background: "var(--gold)" }}
+          <Image
+            src={slides[current].image}
+            alt={slides[current].title}
+            fill
+            priority
+            className="object-cover"
           />
-          WAEC &amp; NECO Approved School
-        </div>
+        </motion.div>
 
-        {/* Heading */}
-        <h1
-          className="mb-5 max-w-212.5 text-4xl leading-[1.1] font-extrabold text-white sm:text-5xl lg:text-[3.6rem]"
-          style={{ fontFamily: "var(--font-head)" }}
-        >
-          Building{" "}
-          <span style={{ color: "var(--gold)" }}>
-            Godly{" "}
-          </span>
-          People,
-          <br />
-          Building The Nation
-        </h1>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/55" />
 
-        {/* Description */}
-        <p className="mb-10 max-w-180 text-base leading-relaxed text-white/75 sm:text-lg">
-          We are building leaders, thinkers, and builders of a better Nigeria.
-        </p>
+        {/* Extra Gradient */}
+        <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-black/20" />
 
-        {/* Buttons */}
-        <div className="mb-14 flex flex-wrap gap-3.5">
-          <Button href="#admissions" variant="primary" className="text-(--gold)" size="lg">
-            <Arrow />
-            Apply for Admission
-          </Button>
+        {/* Bottom Fade */}
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
+      </motion.div>
+    </AnimatePresence>
 
-          <Button href="#contact" variant="secondary" size="lg">
-            <CalendarIcon />
-            Book a School Tour
-          </Button>
-        </div>
+          {/* Indicators */}
+      <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 gap-2">
+      {slides.map((_, index) => (
+        <button
+          key={index}
+          onClick={() => setCurrent(index)}
+          className={`transition-all duration-500 rounded-full ${
+            current === index
+              ? "w-10 h-2"
+              : "w-2 h-2"
+          }`}
+        />
+      ))}
+    </div>
 
-        {/* Stats */}
-        <div className="flex flex-wrap gap-7">
-          {[
-            { icon: "✅", strong: "15+ Years", label: "of Excellence" },
-            { icon: "🎓", strong: "2,000+", label: "Students" },
-            { icon: "👩‍🏫", strong: "150+", label: "Qualified Teachers" },
-            { icon: "📊", strong: "98%", label: "WAEC Success Rate" },
-          ].map((s) => (
-            <div
-              key={s.strong}
-              className="flex items-center gap-2.5"
-            >
-              <div
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-base"
-                style={{ background: "rgba(244,180,0,.15)" }}
-              >
-                {s.icon}
-              </div>
-
-              <div className="text-sm leading-tight font-medium text-white/80">
-                <strong
-                  className="block text-white"
-                  style={{ fontFamily: "var(--font-head)" }}
-                >
-                  {s.strong}
-                </strong>
-
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
+      {/* Content */}
+      <div className="">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
+          <div
+            className="mb-7 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-widest"
+            style={{
+              background: "rgba(244,180,0,.15)",
+              borderColor: "rgba(244,180,0,.35)",
+              color: "var(--gold)",
+              fontFamily: "var(--font-head)",
+            }}
+          >
+            <span
+              className="h-1.5 w-1.5 rounded-full"
+              style={{ background: "var(--gold)" }}
+            />
+            WAEC &amp; NECO Approved School
+          </div>
 
-      {/* Floating Cards */}
-      <div
-        aria-hidden="true"
-        className="absolute right-[6%] bottom-[12%] z-20 hidden flex-col gap-3.5 xl:flex"
-      >
-        <FloatCard
-          icon="🏆"
-          title="25+ Awards"
-          sub="National Recognition"
-          delay="float-card-1"
-        />
+          {/* Heading */}
+          <h1
+            className="mb-5 max-w-212.5 text-4xl leading-[1.1] font-extrabold text-white sm:text-5xl lg:text-[3.6rem]"
+            style={{ fontFamily: "var(--font-head)" }}
+          >
+            Building{" "}
+            <span style={{ color: "var(--gold)" }}>
+              Godly{" "}
+            </span>
+            People,
+            <br />
+            Building The Nation
+          </h1>
 
-        <FloatCard
-          icon="📚"
-          title="WAEC Certified"
-          sub="Approved Curriculum"
-          delay="float-card-2"
-        />
+          {/* Description */}
+          <p className="mb-10 max-w-180 text-base leading-relaxed text-white/75 sm:text-lg">
+            We are building leaders, thinkers, and builders of a better Nigeria.
+          </p>
+
+          {/* Buttons */}
+          <div className="mb-14 flex flex-wrap gap-3.5">
+            <Button href="#admissions" variant="primary" className="text-(--gold)" size="lg">
+              <Arrow />
+              Apply for Admission
+            </Button>
+
+            <Button href="#contact" variant="secondary" size="lg">
+              <CalendarIcon />
+              Book a School Tour
+            </Button>
+          </div>
+
+          {/* Stats */}
+          <div className="flex flex-wrap gap-7">
+            {[
+              { icon: "✅", strong: "12+ Years", label: "of Excellence" },
+              { icon: "🎓", strong: "2,000+", label: "Students" },
+              { icon: "👩‍🏫", strong: "150+", label: "Qualified Teachers" },
+              { icon: "📊", strong: "98%", label: "WAEC Success Rate" },
+            ].map((s) => (
+              <div
+                key={s.strong}
+                className="flex items-center gap-2.5"
+              >
+                <div
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-base"
+                  style={{ background: "rgba(244,180,0,.15)" }}
+                >
+                  {s.icon}
+                </div>
+
+                <div className="text-sm leading-tight font-medium text-white/80">
+                  <strong
+                    className="block text-white"
+                    style={{ fontFamily: "var(--font-head)" }}
+                  >
+                    {s.strong}
+                  </strong>
+
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Floating Cards */}
+        <div
+          aria-hidden="true"
+          className="absolute right-[6%] bottom-[12%] z-20 hidden flex-col gap-3.5 xl:flex"
+        >
+          <FloatCard
+            icon="🏆"
+            title="25+ Awards"
+            sub="National Recognition"
+            delay="float-card-1"
+          />
+
+          <FloatCard
+            icon="📚"
+            title="WAEC Certified"
+            sub="Approved Curriculum"
+            delay="float-card-2"
+          />
+        </div>
       </div>
     </section>
   );

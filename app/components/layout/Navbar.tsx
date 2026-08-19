@@ -68,7 +68,7 @@ export function Navbar() {
               <Image src={Logo} width={50} height={50} alt="School Logo"/>
             </div>
             <div className="leading-tight">
-              <p className="font-head font-bold text-white text-[1rem]">Lordfaith Partner</p>
+              <p className="font-head font-bold text-white text-[1rem]">Lord Faith Partners</p>
               <p className="text-white/60 text-[0.65rem] tracking-wide">Building Godly People, Building the Nation</p>
             </div>
           </Link>
@@ -125,10 +125,10 @@ export function Navbar() {
                 {PORTAL_LINKS.map((p) => (
                   <a
                     key={p.role}
-                    // href={`${SAAS_BASE}?role=${p.role}`}
-                    href={`/login`}
-                    role="menuitem"
                     target="_blank"
+                    // href={`${SAAS_BASE}?role=${p.role}`}
+                    href={`http://faithschool.localhost:3000/auth/login?role=admin`}
+                    role="menuitem"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
                   >

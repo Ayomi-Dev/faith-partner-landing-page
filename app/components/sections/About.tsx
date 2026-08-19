@@ -77,7 +77,7 @@ export function About() {
               Shaping Futures Since 2014
             </h2>
             <p className="text-gray-500 leading-relaxed mb-7">
-              Founded with a passion for transforming young minds, Lordfaith has grown into one
+              Founded with a passion for transforming young minds, Lord Faith Partners has grown into one
               of Nigeria&apos;s most respected educational institutions — combining rigorous academics with
               strong moral values and a vibrant school community.
             </p>
@@ -200,7 +200,7 @@ export function About() {
                   where pupils thrive. She is committed to mentoring staff,
                   supporting families, and championing values-based
                   education that prepares learners for excellence in life and
-                  eternity
+                  eternity.
                 </p>
               </div>
               <Image 

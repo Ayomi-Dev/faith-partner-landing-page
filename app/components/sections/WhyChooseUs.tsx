@@ -8,7 +8,7 @@ export function WhyChooseUs() {
     <section id="why" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14 reveal">
-          <SectionLabel>Why LordFaith Partner?</SectionLabel>
+          <SectionLabel>Why Lord Faith Partners?</SectionLabel>
           <h2 className="font-head font-bold text-navy text-3xl sm:text-4xl leading-tight mb-4">
             Built for Every Dimension of Your Child&apos;s Growth
           </h2>
