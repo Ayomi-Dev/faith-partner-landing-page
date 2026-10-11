@@ -9,7 +9,8 @@ import Logo from "@/public/assets/images/logo.jpeg"
 import { Button } from "../uis/Button";
 import { useRouter } from "next/navigation";
 
-const SAAS_BASE = "https://app.schoolms.io/login";
+const SAAS_BASE = "edusms.site";
+// const SAAS_BASE = "localhost:3000";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -127,8 +128,8 @@ export function Navbar() {
                     key={p.role}
                     target="_blank"
                     // href={`${SAAS_BASE}?role=${p.role}`}
-                    // href={`http://faithschool.localhost:3000/auth/login?role=admin`}
-                    href={`/login`}
+                    href={`http://faithschool.${SAAS_BASE}/auth/login?role=${p.role}`}
+                    // href={`/login`}
                     role="menuitem"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"

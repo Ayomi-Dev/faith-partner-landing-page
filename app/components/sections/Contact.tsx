@@ -11,7 +11,7 @@ const INFO = [
   },
   { icon: "📞", label: "Phone", content: "+234 8035820159\n+234 8023126905", isPhone: true },
   { icon: "💬", label: "WhatsApp", content: "+234 800 000 0000", isWhatsApp: true },
-  { icon: "✉️", label: "Email", content: "admissions@faithpartners.edu.ng", isEmail: true },
+  { icon: "✉️", label: "Email", content: "Lordfaithpartners26@gmail.com", isEmail: true },
 ];
 
 const HOURS = [
