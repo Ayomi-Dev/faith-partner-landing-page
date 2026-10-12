@@ -9,8 +9,8 @@ import Logo from "@/public/assets/images/logo.jpeg"
 import { Button } from "../uis/Button";
 import { useRouter } from "next/navigation";
 
-const SAAS_BASE = "edusms.site";
-// const SAAS_BASE = "localhost:3000";
+// const SAAS_BASE = "edusms.site";
+const SAAS_BASE = "localhost:3000";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

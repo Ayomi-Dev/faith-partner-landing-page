@@ -7,10 +7,10 @@ import { cn } from "@/app/lib/utils";
 
 const INFO = [
   { icon: "📍", label: "Address", 
-    content: `LORD FAITH PARTNERS PRIVATE SCHOOL, MATOGBUN, SURU BLOCK BUS STOP, NEAR ME AND YOU HOTEL.` 
+    content: `LORD FAITH PARTNERS PRIVATE SCHOOL, SURU BLOCK BUS STOP, NEAR ME AND YOU HOTEL VIA OLORUNSOGO ROAD, MATOGBUN IFO, OGUN STATE, NIGERIA.` 
   },
   { icon: "📞", label: "Phone", content: "+234 8035820159\n+234 8023126905", isPhone: true },
-  { icon: "💬", label: "WhatsApp", content: "+234 800 000 0000", isWhatsApp: true },
+  { icon: "💬", label: "WhatsApp", content: "+234 8035820159", isWhatsApp: true },
   { icon: "✉️", label: "Email", content: "Lordfaithpartners26@gmail.com", isEmail: true },
 ];
 
