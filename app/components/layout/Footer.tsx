@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NAV_LINKS, PORTAL_LINKS } from "@/app/lib/constants";
 
-const SAAS_BASE = "https://app.schoolms.io/login";
+const SAAS_BASE = "edusms.site";
 
 export function Footer() {
   return (
@@ -52,7 +52,7 @@ export function Footer() {
             <ul className="space-y-2.5">
               {PORTAL_LINKS.map((p) => (
                 <li key={p.role}>
-                  <a href={`/login`} target="_blank" rel="noopener noreferrer"
+                  <a href={`https://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
                     className="text-sm text-gray-400 hover:text-gold transition-colors">
                     {p.label}
                   </a>

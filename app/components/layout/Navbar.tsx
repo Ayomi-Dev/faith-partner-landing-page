@@ -123,7 +123,7 @@ export function Navbar() {
                     key={p.role}
                     target="_blank"
                     // href={`${SAAS_BASE}?role=${p.role}`}
-                    href={`http://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
+                    href={`https://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
                     // href={`/login`}
                     role="menuitem"
                     rel="noopener noreferrer"
