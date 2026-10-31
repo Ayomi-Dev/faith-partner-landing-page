@@ -9,8 +9,7 @@ import Logo from "@/public/assets/images/logo.jpeg"
 import { Button } from "../uis/Button";
 import { useRouter } from "next/navigation";
 
-// const SAAS_BASE = "edusms.site";
-const SAAS_BASE = "localhost:3000";
+const SAAS_BASE = "edusms.site";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,11 +17,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const portalRef = useRef<HTMLDivElement>(null);
   const router = useRouter()
-
-  const pc = () => {
-    console.log("checked")
-  }
-
+  
   /* Scroll detection */
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -128,7 +123,7 @@ export function Navbar() {
                     key={p.role}
                     target="_blank"
                     // href={`${SAAS_BASE}?role=${p.role}`}
-                    href={`http://faithschool.${SAAS_BASE}/auth/login?role=${p.role}`}
+                    href={`http://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
                     // href={`/login`}
                     role="menuitem"
                     rel="noopener noreferrer"
@@ -197,7 +192,6 @@ export function Navbar() {
               {PORTAL_LINKS.map((p) => (
                 <h3
                   key={p.role}
-                  onClick={pc}
                   className="flex items-center gap-3 py-2.5 text-sm text-white/70 hover:text-gold transition-colors"
                 >
                   <span className="text-lg">{p.emoji}</span> {p.label}
