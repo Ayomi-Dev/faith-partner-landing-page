@@ -8,14 +8,17 @@ import Image from "next/image";
 import Logo from "@/public/assets/images/logo.jpeg"
 import { Button } from "../uis/Button";
 import { useRouter } from "next/navigation";
+import { p } from "motion/react-client";
 
 const SAAS_BASE = "edusms.site";
+// const SAAS_BASE = "localhost:3000"; // For local development, change this to your local server if needed
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [portalOpen, setPortalOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const portalRef = useRef<HTMLDivElement>(null);
+  const mobilePortalRef = useRef<HTMLDivElement>(null);
   const router = useRouter()
   
   /* Scroll detection */
@@ -28,7 +31,11 @@ export function Navbar() {
   /* Close portal dropdown on outside click */
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (portalRef.current && !portalRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      if (
+        !portalRef.current?.contains(target) &&
+        !mobilePortalRef.current?.contains(target)
+      ) {
         setPortalOpen(false);
       }
     };
@@ -122,9 +129,7 @@ export function Navbar() {
                   <a
                     key={p.role}
                     target="_blank"
-                    // href={`${SAAS_BASE}?role=${p.role}`}
-                    href={`https://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
-                    // href={`/login`}
+                    href={`http://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
                     role="menuitem"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
@@ -187,15 +192,17 @@ export function Navbar() {
 
           {/* Portal role list on mobile */}
           {portalOpen && (
-            <div className="mt-6 z-20">
+            <div ref={mobilePortalRef} className="mt-6 z-20">
               <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-3 font-head">Portals</p>
               {PORTAL_LINKS.map((p) => (
-                <h3
+                <a
                   key={p.role}
+                  href={`https://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
                   className="flex items-center gap-3 py-2.5 text-sm text-white/70 hover:text-gold transition-colors"
                 >
-                  <span className="text-lg">{p.emoji}</span> {p.label}
-                </h3>
+                  <span className="text-lg">{p.emoji}</span>
+                  {p.label}
+                </a>
               ))}
             </div>
           )}
