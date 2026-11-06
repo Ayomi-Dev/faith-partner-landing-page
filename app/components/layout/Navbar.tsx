@@ -129,7 +129,9 @@ export function Navbar() {
                   <a
                     key={p.role}
                     target="_blank"
-                    href={`http://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
+                    // href={`${SAAS_BASE}?role=${p.role}`}
+                    href={`https://lordfaithpartners.${SAAS_BASE}/auth/login?role=${p.role}`}
+                    // href={`/login`}
                     role="menuitem"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
